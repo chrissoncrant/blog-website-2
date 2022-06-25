@@ -1,5 +1,11 @@
 :root {
-    --black: black;
+    --black: #0D1321;
+    --gray: #515c50;
+    --white: #F2F4F3;
+    --green: #228b22;
+    --blue: #1C7293;
+    --purple: #4B244A;
+    --pink: #da4141;
 }
 
 *,
@@ -15,12 +21,15 @@
 
 html, body {
     height: 100%;
+    font-size: 16px;
 }
 
 body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 24px;
+    color: var(--black);
 }
 
 img, picture, video, canvas, svg {
@@ -48,8 +57,77 @@ p {
     max-width: 65ch;
 }
 
-/* Not useful to me now, but will be when I start using React */
-/* 
-#root, #__next {
-    isolation: isolate;
-} */
+a {
+    text-decoration: none;
+}
+
+.btn {
+    background-color: var(--blue);
+    display: block;
+    width: fit-content;
+    padding: 6px 18px;
+    color: var(--white);
+    border-radius: 0.75rem;
+    margin-top: 16px;
+}
+
+/* Structural #################################################### */
+.top-bar {
+    padding: 16px 0px 0px;
+}
+
+.blog-cards-container {
+    margin-top: 30px;
+    border-top: 6px solid var(--black);
+    padding-top: 16px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 36px;
+    margin: auto;
+}
+
+.blog-card {
+    border: 0px solid black;
+    border-radius: 12px;
+    width: 100%;
+    /* margin: 12px 12px; */
+    padding: 16px;
+    box-shadow: 4px 3px 0px 4px #04490475;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.card-date {
+    font-style: italic;
+    color: rgb(81, 92, 80);
+    margin-top: 3px;
+}
+
+.card-description {
+    margin-top: 16px;
+}
+
+.card-btns-container {
+    display: flex;
+}
+
+.card-btns-container .btn:not(:first-child) {
+    margin-left: 6px;
+}
+
+#read-btn {
+    background-color: var(--green);
+}
+
+#update-btn {
+    background-color: var(--purple);
+}
+
+#delete-btn {
+    background-color: var(--pink);
+}
