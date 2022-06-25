@@ -14,8 +14,6 @@ const articles = [
     }
 ]
 
-console.log(articles[0].date)
-
 app.set('view engine', 'ejs');
 
 app.use('/articles', articleRouter);

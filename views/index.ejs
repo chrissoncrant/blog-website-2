@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="text-base">
 <head>
     <meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,11 +16,28 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/C-logo.png?v=1.1" type="image/x-icon">
 
-    <!-- <link href="style.css" rel="stylesheet" type="text/css">
-    <script src="script.js" defer></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+    <!-- <script src="script.js" defer></script> -->
 </head>
-<body>
-    <h1><%= articles[0].title %></h1>
+<body class="px-5 md:px-32">
+    <div class="top-bar flex justify-between pt-4">
+        <div class="flex items-center">
+            <h1 class="top-bar-title text-3xl font-bold">The Bloggity Blog</h1>
+        </div>
+        <nav class="flex items-center">
+            <ul class=" flex list-none p-0 text-center">
+                <a href="#" class="nav-link-btn flex justify-center items-center mr-4 border-black border-2 px-3 py-2 active:bg-black active:text-white rounded-lg">
+                    <li>Home</li>
+                </a>
+                <a href="#" class="nav-link-btn flex justify-center items-center mr-4 border-black border-2 px-3 py-2 active:bg-black active:text-white rounded-lg">
+                    <li>Contact</li>
+                </a>
+                <a href="#" class="nav-link-btn flex justify-center items-center border-black border-2 px-3 py-2 active:bg-black active:text-white rounded-lg">
+                    <li>Send  Threat</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>
