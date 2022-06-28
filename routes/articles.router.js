@@ -1,8 +1,13 @@
 const express = require('express');
 const articleRouter = express.Router();
 
-articleRouter.get('/',(req, res) => {
-    res.send('In Articles');
+articleRouter.post('/', (req, res) => {
+
 })
+
+articleRouter.get('/new',(req, res) => {
+    res.render('articles/new')
+})
+
 
 module.exports = articleRouter

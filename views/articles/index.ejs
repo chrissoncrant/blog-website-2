@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="text-base">
+<head>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog #2</title>
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/C-logo.png?v=1.1" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+    <!-- <script src="script.js" defer></script> -->
+</head>
+<body class="px-5 md:px-32">
+    <div class="top-bar flex justify-between pt-4">
+        <div class="flex items-center">
+            <h1 class="top-bar-title text-3xl font-bold">The Bloggity Blog</h1>
+        </div>
+        <nav class="flex items-center">
+            <ul class=" flex list-none p-0 text-center leading-5">
+                <a href="#" class="nav-link-btn flex justify-center items-center mr-4 border-black border-2 px-3 py-2 active:bg-black active:text-white rounded-lg">
+                    <li>Home</li>
+                </a>
+                <a href="/articles/new" class="nav-link-btn flex justify-center items-center mr-4 border-black border-2 px-3 py-2 active:bg-black active:text-white rounded-lg">
+                    <li>New Article</li>
+                </a>
+                <a href="#" class="nav-link-btn flex justify-center items-center border-black border-2 px-3 py-2 active:bg-black active:text-white rounded-lg">
+                    <li>Send  Threat</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="cards-container mt-8">
+        <div class="cards-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <% articles.forEach(article => { %>
+                <div class="card rounded-xl flex flex-col justify-between overflow-hidden shadow-md">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1656231919294-31123d6eab3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1062&q=80" alt="" class="card-image w-full h-48 object-cover object-center">
+                        <h1 class="text-xl bold px-4 mt-4"><%= article.title %></h1>
+                        <p class="date italic text-slate-400 text-sm px-4 mb-4"><%= article.date.toLocaleDateString() %></p>
+                        <p class="description px-4 mb-4"><%= article.description %></p>
+                    </div>
+                    <div class="button px-4">
+                        <a href="#" class="nav-link-btn inline-block border-black border-2 px-2 py-1 active:bg-black active:text-white rounded-lg mb-4 mr-2">Read</a>
+                        <a href="#" class="nav-link-btn inline-block border-black border-2 px-2 py-1 active:bg-black active:text-white rounded-lg mb-4 mr-2">Make Better</a>
+                        <a href="#" class="nav-link-btn inline-block border-black border-2 px-2 py-1 active:bg-black active:text-white rounded-lg mb-4">Eliminate</a>
+                    </div>
+                </div>
+            <% }) %>
+            
+        </div>
+    </div>
+</body>
+</html>
