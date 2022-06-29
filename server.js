@@ -26,6 +26,9 @@ app.set('view engine', 'ejs');
 
 app.use('/articles', articleRouter);
 
+app.use(express.static(path.join(__dirname, 'views', 'articles')));
+// app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req, res) => {
     res.render('articles/index', { articles: articles });
 })

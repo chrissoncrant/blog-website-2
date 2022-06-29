@@ -13,17 +13,17 @@
     <link rel="shortcut icon" href="images/C-logo.png?v=1.1" type="image/x-icon">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+    <link href="custom-css.css" rel="stylesheet" type="text/css">
     <!-- <script src="script.js" defer></script> -->
 </head>
 <body class="px-5 md:px-32">
     <div class="top-bar flex justify-between pt-4">
         <div class="flex items-center">
-            <h1 class="top-bar-title text-3xl font-bold">The Bloggity Blog</h1>
+            <h1 class="top-bar-title text-3xl font-bold">The <span class="font-thin text-4xl mx-2">Bloggity</span> Blog</h1>
         </div>
         <nav class="flex items-center">
             <ul class=" flex list-none p-0 text-center leading-5">
-                <a href="#" class="nav-link-btn flex justify-center items-center mr-4 border-black border-2 px-3 py-2 active:bg-black active:text-white rounded-lg">
+                <a href="/" class="nav-link-btn flex justify-center items-center mr-4 border-black border-2 px-3 py-2 active:bg-black active:text-white rounded-lg">
                     <li>Home</li>
                 </a>
                 <a href="/articles/new" class="nav-link-btn flex justify-center items-center mr-4 border-black border-2 px-3 py-2 active:bg-black active:text-white rounded-lg">
@@ -42,7 +42,7 @@
                 <div class="card rounded-xl flex flex-col justify-between overflow-hidden shadow-md">
                     <div class="content">
                         <img src="https://images.unsplash.com/photo-1656231919294-31123d6eab3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1062&q=80" alt="" class="card-image w-full h-48 object-cover object-center">
-                        <h1 class="text-xl bold px-4 mt-4"><%= article.title %></h1>
+                        <h1 class="font-medium text-xl bold px-4 mt-4"><%= article.title %></h1>
                         <p class="date italic text-slate-400 text-sm px-4 mb-4"><%= article.date.toLocaleDateString() %></p>
                         <p class="description px-4 mb-4"><%= article.description %></p>
                     </div>
